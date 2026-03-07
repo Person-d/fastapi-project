@@ -31,6 +31,12 @@ def init_db():
 
 init_db()
 
+@app.get("/")
+def root():
+    return {
+        "message": "API is running. For work with DB use --> http://127.0.0.1:8000/docs"
+    }
+
 # CREATE
 @app.post("/users/", response_model=User)
 def create_user(user: User):
