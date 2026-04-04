@@ -6,7 +6,7 @@ import os
 
 app = FastAPI(title="Users API")
 
-DB_FILE = "users.db"
+DB_FILE = "data/users.db"
 
 # Модель користувача
 class User(BaseModel):
